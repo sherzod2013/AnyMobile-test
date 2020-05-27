@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">AnyMobile Test</string>
+    <string name="unable_load">Server is not responding, please check internet connection...</string>
+</resources>
