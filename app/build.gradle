@@ -1,11 +1,11 @@
 apply plugin: 'com.android.application'
-
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-kapt'
 
 android {
-    compileSdkVersion versions.compileSdk
+    compileSdkVersion 29
+    buildToolsVersion "29.0.3"
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
@@ -15,10 +15,10 @@ android {
     }
     defaultConfig {
         applicationId "uz.anymobile.myapplication"
-        minSdkVersion versions.minSdk
-        targetSdkVersion versions.targetSdk
-        versionCode versions.code
-        versionName versions.name
+        minSdkVersion 19
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
         multiDexEnabled true
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -64,19 +64,19 @@ dependencies {
     def room_version = "2.2.5"
     annotationProcessor "androidx.room:room-compiler:$room_version"
     implementation "android.arch.persistence.room:runtime:1.1.1"
-    kapt "android.arch.persistence.room:compiler:1.1.1"
+    kapt "android.arch.persistence.room:compiler:1.1.1"// For Kotlin use kapt instead of annotationProcessor
     // optional - Kotlin Extensions and Coroutines support for Room
     implementation "androidx.room:room-ktx:$room_version"
     // optional - RxJava support for Room
     implementation "androidx.room:room-rxjava2:$room_version"
     def paging_version = "2.1.0"
-    implementation "androidx.paging:paging-runtime:$paging_version"
+    implementation "androidx.paging:paging-runtime:$paging_version" // For Kotlin use paging-runtime-ktx
     // alternatively - without Android dependencies for testing
-    testImplementation "androidx.paging:paging-common:$paging_version"
+    testImplementation "androidx.paging:paging-common:$paging_version" // For Kotlin use paging-common-ktx
     // optional - RxJava support
-    implementation "androidx.paging:paging-rxjava2:$paging_version"
-    implementation "androidx.paging:paging-runtime-ktx:2.1.0-rc01"
-    implementation 'com.google.android.material:material:1.1.0'
+    implementation "androidx.paging:paging-rxjava2:$paging_version" // For Kotlin use paging-rxjava2-ktxac
+    implementation "androidx.paging:paging-runtime-ktx:2.1.0-rc01" // For Kotlin use paging-runtime-ktx
+    implementation 'com.google.android.material:material:1.1.0'// For Kotlin use paging-rxjava2-ktx
     // Saved state module for ViewModel
     def lifecycle_version = "2.2.0"
     // ViewModel
