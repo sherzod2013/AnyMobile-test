@@ -1,10 +1,7 @@
 package uz.anymobile.test
 
-import android.app.Application
 import android.content.Context
 import androidx.multidex.MultiDexApplication
-import dagger.android.AndroidInjector
-import dagger.android.DaggerApplication
 import uz.anymobile.test.di.AppComponent
 import uz.anymobile.test.di.DaggerAppComponent
 import uz.anymobile.test.di.modules.ContextModule

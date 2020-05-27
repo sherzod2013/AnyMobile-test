@@ -1,12 +1,11 @@
 package uz.anymobile.test.ui.adapters
 
-import android.os.Bundle
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentStatePagerAdapter
+import uz.anymobile.test.ui.fragments.item.ItemFragment
 import uz.anymobile.test.ui.fragments.network.NetworkFragment
 import uz.anymobile.test.ui.fragments.user.UserFragment
-import uz.anymobile.test.utils.Constants
 
 class PagerAdapter(fm: FragmentManager) : FragmentStatePagerAdapter(fm) {
 
@@ -16,7 +15,7 @@ class PagerAdapter(fm: FragmentManager) : FragmentStatePagerAdapter(fm) {
         return when(i){
             0 -> UserFragment()
             1 -> NetworkFragment()
-            2 -> UserFragment()
+            2 -> ItemFragment()
             else -> UserFragment()
         }
     }

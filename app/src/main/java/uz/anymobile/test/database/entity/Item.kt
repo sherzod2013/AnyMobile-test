@@ -6,15 +6,15 @@ import androidx.room.PrimaryKey
 
 @Entity
 data class Item(
-    @PrimaryKey val uid: Int,
     @ColumnInfo(name = "name") val firstName: String?
 ) {
-
+    @PrimaryKey(autoGenerate = true)
+    var uid: Int = 0
     companion object {
         fun populateData(): List<Item> {
             val data = ArrayList<Item>()
             for (i in 1..100){
-                data.add(Item(i, "Item $i"))
+                data.add(Item("Item $i"))
             }
             return data
         }

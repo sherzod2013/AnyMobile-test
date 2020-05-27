@@ -6,7 +6,6 @@ import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import uz.anymobile.test.di.scopes.ActivityScope
 import uz.anymobile.test.utils.Constants
-import javax.inject.Singleton
 
 @Module
 class NetworkModule {
@@ -22,7 +21,6 @@ class NetworkModule {
             .addInterceptor {
                 val original = it.request()
                 val originalHttpUrl = original.url
-
                 val url = originalHttpUrl.newBuilder()
                         .addQueryParameter("uuid", Constants.UUID)
                         .addQueryParameter("secret", Constants.SECRET)

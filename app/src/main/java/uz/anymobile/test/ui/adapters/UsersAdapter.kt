@@ -4,6 +4,7 @@ import android.view.ViewGroup
 import androidx.paging.PagedListAdapter
 import androidx.recyclerview.widget.DiffUtil
 import uz.anymobile.test.database.entity.User
+import uz.anymobile.test.ui.viewholders.UserViewHolder
 
 class UsersAdapter() :
     PagedListAdapter<User, UserViewHolder>(DIFF_CALLBACK) {

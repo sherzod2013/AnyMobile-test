@@ -1,4 +1,4 @@
-package uz.anymobile.test.ui.adapters
+package uz.anymobile.test.ui.viewholders
 
 import android.view.LayoutInflater
 import android.view.ViewGroup

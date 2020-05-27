@@ -1,6 +1,5 @@
 package uz.anymobile.test.ui.fragments.network.mvp
 
-import io.reactivex.Observable
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
 import uz.anymobile.test.ui.base.BasePresenter
@@ -24,7 +23,7 @@ class NetworkPresenter(
     private fun startLoad() {
         view.setLoading(true)
         compositeDisposable.add(
-            model.service.discoverMovies()
+            model.service.discoverAdds()
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribeOn(Schedulers.io())
                 .subscribe({

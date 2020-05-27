@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">AnyMobile Test</string>
     <string name="unable_load">Server is not responding, please check internet connection...</string>
+    <string name="dialog_hint">Name</string>
+    <string name="add_btn_text">Add</string>
+    <string name="cancel_btn_text">Cancel</string>
 </resources>
